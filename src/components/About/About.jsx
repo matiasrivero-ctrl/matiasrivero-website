@@ -1,28 +1,16 @@
 import styled from 'styled-components';
 
+import { Skills, Story } from '../../layouts';
+
 const About = () => {
+  const size = '4rem';
+
   return (
     <>
       <Container>
         <Row>
-          <div>
-            <h2>My Story</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-              reiciendis amet inventore magnam nemo mollitia saepe sequi,
-              corporis asperiores quas a vitae ab dolorum ipsa enim
-              exercitationem laborum doloremque repellat.
-            </p>
-          </div>
-          <div>
-            <h2>My Skills</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi ab
-              ipsum nisi molestiae repellat officia fuga quam in, placeat
-              suscipit, unde tempore consequatur? Voluptas nam, atque laborum
-              quia eligendi ut.
-            </p>
-          </div>
+          <Story />
+          <Skills size={size} />
         </Row>
       </Container>
     </>
@@ -47,19 +35,8 @@ const Row = styled.div`
 
   display: flex;
   align-items: center;
-
+  column-gap: 3.5rem;
   padding-top: 2rem;
-
-  div {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 2rem;
-
-    p {
-      padding-top: 0.5rem;
-      line-height: 30px;
-    }
-  }
 
   @media (max-width: 768px) {
     display: flex;

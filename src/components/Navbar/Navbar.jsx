@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import styled from 'styled-components';
-import BurgerButton from '../../layouts/Burguer/Burguer';
+import { Burger } from '../../layouts';
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
           </div>
 
           <div className="burger">
-            <BurgerButton clicked={clicked} handleClick={handleClick} />
+            <Burger clicked={clicked} handleClick={handleClick} />
           </div>
         </div>
       </Container>
