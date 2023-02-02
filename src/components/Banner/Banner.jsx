@@ -1,53 +1,75 @@
 import styled from 'styled-components';
+import videoBg from '../../assets/videoGb.mp4';
+import Typewriter from 'typewriter-effect';
+import About from '../About/About';
 
 const Banner = () => {
   return (
     <>
-      <Container>
-        <img src="https://picsum.photos/200" />
-
-        <div>
-          <h1>Hello, world!</h1>
-          <h3>Backend Dev ¬ Solidity Dev</h3>
+      <Main>
+        <video src={videoBg} autoPlay loop muted></video>
+        <div className="content">
+          <h1>Matías Rivero</h1>
+          <h2>
+            <Typewriter
+              options={{
+                strings: ['Backend Developer', 'Solidity Developer'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h2>
         </div>
-      </Container>
+
+        <About />
+      </Main>
     </>
   );
 };
 
 export default Banner;
 
-const Container = styled.div`
-  width: 100%;
-  height: 35vh;
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  position: relative;
-  z-index: -10;
+const Main = styled.div`
+  width: 100vw;
+  height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 
-  img {
-    border-radius: 50%;
+  position: absolute;
+
+  z-index: -1;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
   }
 
-  div {
-    padding: 2rem;
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     color: white;
-  }
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
 
-  @media (max-width: 768px) {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    height: 60vh;
-
-    div {
-      padding: 1rem;
-      text-align: center;
+    h1 {
+      text-transform: uppercase;
+    }
+    h2 {
+      color: #645cbb;
     }
   }
 `;

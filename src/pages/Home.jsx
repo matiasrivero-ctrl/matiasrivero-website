@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { Header, Banner, About } from '../components';
-
 function Home() {
   const [userData, setUserData] = useState();
 
@@ -20,11 +19,8 @@ function Home() {
 
   return (
     <>
-      <Header />
       <Banner />
-
-      <About />
-
+      <Header />
       {!userData
         ? null
         : userData.map((item) => (

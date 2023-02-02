@@ -45,6 +45,7 @@ export default Navbar;
 
 const Container = styled.div`
   width: 100%;
+  font-family: 'Poppins', sans-serif;
 
   .row {
     display: flex;
@@ -57,7 +58,7 @@ const Container = styled.div`
     margin: auto;
 
     h2 {
-      color: #005bc5;
+      color: #fff;
       font-weight: 300;
 
       span {
@@ -69,13 +70,13 @@ const Container = styled.div`
       .link {
         a {
           font-size: 20px;
-          color: black;
+          color: white;
           text-decoration: none;
           padding: 2rem;
 
           :hover {
             transition: all 0.5s ease;
-            color: #e8cc9c;
+            color: #645cbb;
           }
 
           :last-child {
@@ -94,7 +95,7 @@ const Container = styled.div`
     // -- Responsive - Mobile
     @media (max-width: 768px) {
       h2 {
-        color: #005bc5;
+        color: #645cbb;
       }
 
       .links {
@@ -116,7 +117,7 @@ const Container = styled.div`
         right: 0;
         left: 0;
 
-        background: #fff;
+        background: transparent;
 
         transition: all 0.5s ease;
 

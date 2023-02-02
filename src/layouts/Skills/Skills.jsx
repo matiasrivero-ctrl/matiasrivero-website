@@ -14,7 +14,7 @@ import {
 const Skills = ({ size }) => {
   return (
     <Skill>
-      <h2>My Skills</h2>
+      <h2>Skills</h2>
       <div className="skills_icons">
         <Html5PlainIcon size={size} />
         <Css3PlainIcon size={size} />
@@ -34,6 +34,12 @@ export default Skills;
 
 const Skill = styled.div`
   padding: 1rem;
+
+  h2 {
+    letter-spacing: 1px;
+    font-family: 'Space Mono', sans-serif;
+    text-transform: uppercase;
+  }
 
   .skills_icons {
     display: grid;

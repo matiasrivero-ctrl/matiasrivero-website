@@ -3,7 +3,7 @@ import { AiOutlineArrowDown } from 'react-icons/ai';
 
 const Story = () => (
   <MyStory>
-    <h2>My Story</h2>
+    <h2>About me</h2>
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
       reiciendis amet inventore magnam nemo mollitia saepe sequi, corporis
@@ -12,10 +12,7 @@ const Story = () => (
     </p>
 
     <button className="resume">
-      <div className="download_icon">
-        <AiOutlineArrowDown size="24px" />
-      </div>
-      <p>Resume (CV)</p>
+      <p>Download CV</p>
     </button>
   </MyStory>
 );
@@ -26,10 +23,18 @@ const MyStory = styled.div`
   padding: 1rem;
   align-self: flex-start;
 
+  h2 {
+    letter-spacing: 1px;
+    font-family: 'Space Mono', sans-serif;
+    text-transform: uppercase;
+  }
+
   p {
     text-align: justify;
     padding-top: 0.5rem;
     line-height: 30px;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
   }
 
   .resume {
@@ -37,28 +42,23 @@ const MyStory = styled.div`
     justify-content: center;
     align-items: center;
 
-    border: none;
+    border: 1px solid red;
+    padding: 7px;
+    border-radius: 10px;
+
     background: none;
 
     :hover {
       transition: all 0.5s ease-out;
-      padding-top: 0.5rem;
       color: red;
     }
 
     margin-top: 3rem;
 
-    .download_icon {
-      padding: 1rem 1rem 1rem 0;
-      border-radius: 100%;
-      font-size: 1rem;
-    }
-
     p {
       padding-top: 0;
-      font-family: 'Bebas Neue', cursive;
-      font-size: 22px;
-      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
       padding-left: 0rem;
     }
   }
