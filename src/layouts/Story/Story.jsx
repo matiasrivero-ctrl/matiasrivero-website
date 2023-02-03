@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { AiOutlineArrowDown } from 'react-icons/ai';
 
 const Story = () => (
   <MyStory>
-    <h2>About me</h2>
+    <h1>About me</h1>
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
       reiciendis amet inventore magnam nemo mollitia saepe sequi, corporis
@@ -23,9 +22,7 @@ const MyStory = styled.div`
   padding: 1rem;
   align-self: flex-start;
 
-  h2 {
-    letter-spacing: 1px;
-    font-family: 'Space Mono', sans-serif;
+  h1 {
     text-transform: uppercase;
   }
 

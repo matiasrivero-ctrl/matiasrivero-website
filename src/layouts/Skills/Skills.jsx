@@ -14,7 +14,7 @@ import {
 const Skills = ({ size }) => {
   return (
     <Skill>
-      <h2>Skills</h2>
+      <h1>Skills</h1>
       <div className="skills_icons">
         <div className="icons">
           <Html5OriginalWordmarkIcon size={size} />
@@ -53,8 +53,7 @@ export default Skills;
 const Skill = styled.div`
   padding: 1rem;
 
-  h2 {
-    font-family: 'Space Mono', sans-serif;
+  h1 {
     text-transform: uppercase;
   }
 

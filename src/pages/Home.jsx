@@ -30,11 +30,19 @@ function Home() {
       <Container>
         <Background />
         <About />
-        {!project
-          ? 'Loading...'
-          : project.map((element) => (
-              <Projects project={element} key={element.id} />
-            ))}
+
+        <CardContainer>
+          <CardRow>
+            <h1 className="section-title">Projects</h1>
+            <Card>
+              {!project
+                ? 'Loading...'
+                : project.map((element) => (
+                    <Projects project={element} key={element.id} />
+                  ))}
+            </Card>
+          </CardRow>
+        </CardContainer>
       </Container>
       <Navbar />
     </>
@@ -53,4 +61,35 @@ const Container = styled.div`
   position: absolute;
 
   z-index: -1;
+`;
+
+const CardContainer = styled.div`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 1rem;
+`;
+
+const CardRow = styled.div`
+  width: 100%;
+
+  max-width: 1240px;
+
+  .section-title {
+    text-transform: uppercase;
+    padding: 0 0 1rem 0;
+  }
+`;
+
+const Card = styled.div`
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* see notes below */
+  grid-auto-rows: auto;
+  column-gap: 2rem;
+  row-gap: 2rem;
 `;
