@@ -42,15 +42,16 @@ const MyStory = styled.div`
     justify-content: center;
     align-items: center;
 
-    border: 1px solid red;
+    border: 2px solid #645cbb;
     padding: 7px;
     border-radius: 10px;
 
     background: none;
 
     :hover {
+      cursor: pointer;
       transition: all 0.5s ease-out;
-      color: red;
+      margin-left: 0.7rem;
     }
 
     margin-top: 3rem;

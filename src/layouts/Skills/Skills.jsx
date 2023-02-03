@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import {
-  Html5PlainIcon,
-  Css3PlainIcon,
-  JavascriptPlainIcon,
-  ReactOriginalIcon,
-  NodejsPlainIcon,
+  Html5OriginalWordmarkIcon,
+  Css3OriginalWordmarkIcon,
+  JavascriptOriginalIcon,
+  ReactOriginalWordmarkIcon,
+  NodejsOriginalIcon,
   ExpressOriginalIcon,
-  MysqlPlainIcon,
+  MysqlOriginalIcon,
   MongodbOriginalIcon,
   TypescriptPlainIcon,
 } from 'react-devicons';
@@ -16,15 +16,33 @@ const Skills = ({ size }) => {
     <Skill>
       <h2>Skills</h2>
       <div className="skills_icons">
-        <Html5PlainIcon size={size} />
-        <Css3PlainIcon size={size} />
-        <JavascriptPlainIcon size={size} />
-        <TypescriptPlainIcon size={size} />
-        <ReactOriginalIcon size={size} />
-        <NodejsPlainIcon size={size} />
-        <ExpressOriginalIcon size={size} />
-        <MysqlPlainIcon size={size} />
-        <MongodbOriginalIcon size={size} />
+        <div className="icons">
+          <Html5OriginalWordmarkIcon size={size} />
+        </div>
+        <div className="icons">
+          <Css3OriginalWordmarkIcon size={size} />
+        </div>
+        <div className="icons">
+          <JavascriptOriginalIcon size={size} />
+        </div>
+        <div className="icons">
+          <TypescriptPlainIcon size={size} />
+        </div>
+        <div className="icons">
+          <ReactOriginalWordmarkIcon size={size} />
+        </div>
+        <div className="icons">
+          <NodejsOriginalIcon size={size} />
+        </div>
+        <div className="icons">
+          <ExpressOriginalIcon size={size} />
+        </div>
+        <div className="icons">
+          <MysqlOriginalIcon size={size} />
+        </div>
+        <div className="icons">
+          <MongodbOriginalIcon size={size} />
+        </div>
       </div>
     </Skill>
   );
@@ -36,7 +54,6 @@ const Skill = styled.div`
   padding: 1rem;
 
   h2 {
-    letter-spacing: 1px;
     font-family: 'Space Mono', sans-serif;
     text-transform: uppercase;
   }
@@ -48,6 +65,12 @@ const Skill = styled.div`
     row-gap: 2rem;
 
     padding: 1rem 0 0 0;
+
+    .icons {
+      padding: 1rem;
+
+      background-color: #f5f5f5;
+    }
   }
 
   @media (max-width: 768px) {

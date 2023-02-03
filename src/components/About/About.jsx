@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Skills, Story } from '../../layouts';
 
 const About = () => {
-  const size = '4rem';
+  const size = '3rem';
 
   return (
     <>
@@ -22,8 +22,6 @@ export default About;
 const Container = styled.div`
   width: 100%;
 
-  background: #f9f9f9;
-
   display: flex;
   justify-content: center;
 `;
@@ -33,9 +31,11 @@ const Row = styled.div`
 
   max-width: 1240px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+
   align-items: center;
-  column-gap: 3.5rem;
+  column-gap: 3rem;
   padding-top: 2rem;
 
   @media (max-width: 768px) {

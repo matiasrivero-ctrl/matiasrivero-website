@@ -1,37 +1,56 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-import { Header, Banner, About } from '../components';
+// Components
+import { Navbar, Projects, About } from '../components';
+
+// Libraries
+import axios from 'axios';
+import styled from 'styled-components';
+
+// Layout
+import { Background } from '../layouts';
+
 function Home() {
-  const [userData, setUserData] = useState();
+  const [project, setProject] = useState();
 
   useEffect(() => {
-    if (!userData) {
+    if (!project) {
       const fetchData = async () => {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}`);
         const { data } = response.data;
-        await setUserData(data);
+        await setProject(data);
       };
 
-      // fetchData();
+      fetchData();
     }
   }, []);
 
   return (
     <>
-      <Banner />
-      <Header />
-      {!userData
-        ? null
-        : userData.map((item) => (
-            <>
-              <h1 key={item.id}>{item.attributes.title}</h1>
-              <p>{item.attributes.description}</p>
-              <a href="#code">{item.attributes.code}</a>
-            </>
-          ))}
+      <Container>
+        <Background />
+        <About />
+        {!project
+          ? 'Loading...'
+          : project.map((element) => (
+              <Projects project={element} key={element.id} />
+            ))}
+      </Container>
+      <Navbar />
     </>
   );
 }
 
 export default Home;
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+
+  z-index: -1;
+`;
