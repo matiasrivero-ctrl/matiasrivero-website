@@ -17,7 +17,11 @@ const Background = () => (
         <h2>
           <Typewriter
             options={{
-              strings: ['Backend Developer', 'Solidity Developer'],
+              strings: [
+                'Frontend Developer',
+                'Backend Developer',
+                'Solidity Developer',
+              ],
               autoStart: true,
               loop: true,
             }}
@@ -77,7 +81,7 @@ const Content = styled.div`
       text-transform: uppercase;
     }
     h2 {
-      color: #645cbb;
+      color: #85cdfd;
     }
   }
 

@@ -11,6 +11,8 @@ import {
   TypescriptPlainIcon,
 } from 'react-devicons';
 
+import { SiSolidity, SiEthereum } from 'react-icons/si';
+
 const Skills = ({ size }) => {
   return (
     <Skill>
@@ -42,6 +44,12 @@ const Skills = ({ size }) => {
         </div>
         <div className="icons">
           <MongodbOriginalIcon size={size} />
+        </div>
+        <div className="icons">
+          <SiSolidity size={size} />
+        </div>
+        <div className="icons">
+          <SiEthereum size={size} />
         </div>
       </div>
     </Skill>

@@ -27,8 +27,7 @@ const MyStory = styled.div`
   }
 
   p {
-    text-align: justify;
-    padding-top: 0.5rem;
+    padding: 0.5rem 0.5rem 0 0;
     line-height: 30px;
     font-weight: lighter;
     font-family: 'Poppins', sans-serif;
@@ -39,16 +38,16 @@ const MyStory = styled.div`
     justify-content: center;
     align-items: center;
 
-    border: 2px solid #645cbb;
-    padding: 7px;
-    border-radius: 10px;
+    padding: 0.5rem;
 
     background: none;
 
     :hover {
       cursor: pointer;
       transition: all 0.5s ease-out;
-      margin-left: 0.7rem;
+      border: 2px solid black;
+      background: #85cdfd;
+      padding: 0.7rem;
     }
 
     margin-top: 3rem;

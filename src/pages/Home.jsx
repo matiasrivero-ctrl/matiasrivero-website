@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 // Components
-import { Navbar, Projects, About } from '../components';
+import { Navbar, Projects, About, Contact, Footer } from '../components';
 
 // Libraries
 import axios from 'axios';
@@ -43,6 +43,9 @@ function Home() {
             </Card>
           </CardRow>
         </CardContainer>
+
+        <Contact />
+        <Footer />
       </Container>
       <Navbar />
     </>
@@ -70,6 +73,7 @@ const CardContainer = styled.div`
   justify-content: center;
 
   padding: 1rem;
+  margin: 2rem 0 0 0;
 `;
 
 const CardRow = styled.div`

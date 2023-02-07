@@ -76,7 +76,7 @@ const Container = styled.div`
 
           :hover {
             transition: all 0.5s ease;
-            color: #645cbb;
+            color: #85cdfd;
           }
 
           :last-child {
@@ -95,7 +95,7 @@ const Container = styled.div`
     // -- Responsive - Mobile
     @media (max-width: 768px) {
       h2 {
-        color: #645cbb;
+        color: #85cdfd;
       }
 
       .links {

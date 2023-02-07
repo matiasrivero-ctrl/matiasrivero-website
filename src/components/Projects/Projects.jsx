@@ -58,8 +58,6 @@ const Card = styled.div`
     padding: 0.5rem;
     background: none;
 
-    border-radius: 10px;
-
     margin: 0 1rem 0 0;
 
     a {
@@ -71,17 +69,18 @@ const Card = styled.div`
   }
 
   .btn-code {
-    border: 2px solid gainsboro;
+    border: 2px solid black;
 
     :hover {
       transition: all 0.5s ease;
-      background: #645cbb;
-      border-color: #645cbb;
+      background: #85cdfd;
+      border-color: #000;
     }
   }
 
   .btn-demo {
-    border: none;
+    border: 2px solid black;
+
     background: #fef9ef;
 
     a {
@@ -90,7 +89,7 @@ const Card = styled.div`
 
     :hover {
       transition: all 0.5s ease;
-      background: #227c9d;
+      background: #93bfcf;
 
       a {
         color: black;

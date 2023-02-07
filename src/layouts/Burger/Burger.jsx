@@ -38,7 +38,7 @@ const Burger = styled.div`
   .hamburger .line {
     width: 50px;
     height: 5px;
-    background-color: #645cbb;
+    background-color: #85cdfd;
     border-radius: 5px;
     display: block;
     margin: 8px auto;

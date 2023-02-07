@@ -36,14 +36,14 @@ const Row = styled.div`
 
   align-items: center;
   column-gap: 3rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
 
     div {
-      padding: 2rem;
+      padding: 2rem 0 0 1rem;
     }
   }
 `;
